@@ -1,15 +1,12 @@
-package ru.gb.catch_the_drop;
-
-
 import java.util.Arrays;
 
-public class Main {
+public class lesson3 {
 
     public static void main(String[] args) {
         // Задать пустой целочисленный массив длиной 100. С помощью цикла заполнить его значениями 1 2 3 4 5 6 7 8 … 100;
         System.out.println("Задание 1:");
         int[] mass100 = new int[100];
-        for (int i = 0; i < mass100.length; i++) {
+        for (int i=0 ; i < mass100.length; i++) {
             mass100[i] = (i + 1);
         }
         System.out.println(Arrays.toString(mass100));
@@ -71,12 +68,12 @@ public class Main {
         System.out.println(Arrays.toString(array6));
         int min = array6[0];
         int max = array6[0];
-        for (int i = 0; i < array6.length; i++) {
-            if (min > array6[i]) {
-                min = array6[i];
+        for (int element: array6) {
+            if (min > element) {
+                min = element;
             }
-            if (max < array6[i]) {
-                max = array6[i];
+            if (max < element) {
+                max = element;
             }
         }
         System.out.println("Минимальное число: " + min);
@@ -86,9 +83,11 @@ public class Main {
 
     public static void metodLeninitialValue(int len, int initialValue){
         int[] array5 = new int[len];
-        for (int i=0; i< array5.length; i++){
-            array5[i]=initialValue;
+        for (int element: array5){
+           element = initialValue;
         }
         System.out.println(Arrays.toString(array5));
     }
 }
+
+
